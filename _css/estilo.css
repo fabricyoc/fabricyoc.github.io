@@ -1,0 +1,46 @@
+body{
+    background: rgba(241, 140, 24, 0.726);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.253);
+}
+
+div#txt {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.circle {
+    margin: auto;
+    background-color: #aaa;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+  
+.circle img {
+    position: absolute;
+    bottom: -40px;
+    /* bottom: 0; */
+    width: 100%;
+}
