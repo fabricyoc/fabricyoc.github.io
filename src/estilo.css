@@ -121,6 +121,10 @@ hr {
     font-weight: 100;
 }
 
+#limpar{
+    display: none;
+}
+
 
 /* Responsividade */
 @media (max-width: 600px) {

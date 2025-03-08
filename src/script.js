@@ -16,12 +16,20 @@ function formatarMoeda(valor) {
     return partes.join(',');
 }
 
+function limpar(e) {
+    e.preventDefault();  // Impede o comportamento padrão do link (navegação)
+    document.getElementById("expressao").value = '';  // Limpa o campo de expressão
+    document.getElementById("resultado").textContent = '';  // Limpa o resultado, se necessário
+}
+
 function calcular() {
     let exp = document.getElementById("expressao");
     let resultado = document.getElementById("resultado");
+    document.getElementById("limpar").style = "display: block;";
 
     // Se o campo estiver vazio, desaparece
     if (exp.value.trim() === '') {
+        document.getElementById("limpar").style = "display: none;";
         resultado.textContent = '';
         return;
     }
@@ -33,7 +41,7 @@ function calcular() {
 
         // Limitar o resultado a duas casas decimais
         calculo = calculo.toFixed(2);
-        
+
         // Formatar o resultado com separadores corretos
         calculo = formatarMoeda(calculo);
 
