@@ -20,6 +20,8 @@ function limpar(e) {
     e.preventDefault();  // Impede o comportamento padrão do link (navegação)
     document.getElementById("expressao").value = '';  // Limpa o campo de expressão
     document.getElementById("resultado").textContent = '';  // Limpa o resultado, se necessário
+    document.getElementById("limpar").style = "display: none;";
+
 }
 
 function calcular() {
