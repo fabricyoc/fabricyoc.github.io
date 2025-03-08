@@ -21,6 +21,8 @@ function limpar(e) {
     document.getElementById("expressao").value = '';  // Limpa o campo de expressão
     document.getElementById("resultado").textContent = '';  // Limpa o resultado, se necessário
     document.getElementById("limpar").style = "display: none;";
+    // Coloca o foco novamente no campo de expressão para manter o teclado visível
+    document.getElementById("expressao").focus();
 
 }
 
