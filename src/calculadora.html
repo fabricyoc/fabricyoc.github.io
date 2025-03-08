@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olá, sou Fabricyo!</title>
-    <link rel="shortcut icon" href="./src/ico.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/estilo.css">
+    <link rel="shortcut icon" href="./ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="./estilo.css">
 </head>
 
 <body>
@@ -25,28 +25,30 @@
 
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/fabricyoc/" target="_blank" title="Veja o LinkedIn de Fabricyo...">
-                    <img src="./src/logo-linkedin.png" alt="Logo indisponível">
+                    <img src="./logo-linkedin.png" alt="Logo indisponível">
                 </a>
                 <a href="https://www.instagram.com/fabricyoc/" target="_blank" title="Veja o Instagram de Fabricyo...">
-                    <img src="./src/logo-instagram.png" alt="Logo indisponível">
+                    <img src="./logo-instagram.png" alt="Logo indisponível">
                 </a>
                 <a href="https://www.github.com/fabricyoc" target="_blank" title="Veja meu portfólio...">
-                    <img src="./src/logo-github.png" alt="Logo indisponível">
+                    <img src="./logo-github.png" alt="Logo indisponível">
                 </a>
                 <a href="mailto:proffabricyo@gmail.com" target="_blank" title="Mande um e-mail para Fabricyo...">
-                    <img src="./src/logo-email.png" alt="Logo indisponível">
+                    <img src="./logo-email.png" alt="Logo indisponível">
                 </a>
             </div>
 
             <hr>
 
             <div class="functions">
-                <a href="./src/calculadora.html">Calculadora</a>
-                <a href="#">Materiais</a>
+                <input type="tel" id="expressao" oninput="calcular()" placeholder="Digite a expressão..." autocomplete="off">
+                <h3 id="resultado"></h3>
+                <a href="../index.html">Voltar</a>
             </div>
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
