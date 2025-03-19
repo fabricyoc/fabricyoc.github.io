@@ -15,7 +15,7 @@
 <body>
   <section class="container-apostas">
     <span>Deseja fazer quantas apostas?</span>
-    <input type="number" min="1" value="1" id="quantidade-apostas" />
+    <input type="number" min="1" value="1" id="quantidade-apostas" onkeydown="verificarTecla(event)"/>
     <button onclick="gerarApostas()">Gerar apostas</button>
     <button onclick="window.location.href='https://fabricyoc.github.io';">Voltar</button>
     <button onclick="limparApostas()" id="btnLimpar">Limpar</button>

@@ -110,7 +110,8 @@ function gerarApostas() {
         // Adiciona o <li> à lista de apostas
         listaApostas.appendChild(li);
     }
-    document.getElementById("quantidade-apostas").value = "1";
+    // setava 1 para qntApostas quando gerava as apostas
+    // document.getElementById("quantidade-apostas").value = "1";
 }
 
 function limparApostas() {
@@ -119,6 +120,9 @@ function limparApostas() {
 
     // remove todas as li
     linhas.forEach(i => i.remove());
+
+    // seta 1 para qntApostas
+    document.getElementById("quantidade-apostas").value = "1";
 
     // remove o botão Limpar do HTML
     document.getElementById("btnLimpar").style.display = "none";
@@ -133,4 +137,11 @@ function copiarParaAreaDeTransferencia(texto) {
         .catch(function (err) {
             console.error("Erro ao copiar o texto: ", err);
         });
+}
+
+function verificarTecla(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Evita o comportamento padrão
+        gerarApostas(); // Chama a função desejada
+    }
 }
