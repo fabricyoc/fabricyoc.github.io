@@ -91,7 +91,7 @@ hr {
     gap: 8px;
 }
 
-.functions a{
+.functions a {
     background-color: var(--cor-primaria);
     padding-block: 0.5rem;
     text-decoration: none;
@@ -101,13 +101,13 @@ hr {
     font-weight: bold;
 }
 
-.functions a:hover{
+.functions a:hover {
     background-color: var(--cor-secundaria);
     box-shadow: 2px 2px 5px var(--cor-primaria);
 }
 
 /* calculadora */
-#expressao{
+#expressao {
     outline: none;
     border: 1px solid var(--cor-primaria);
     font-size: 1.5rem;
@@ -117,11 +117,11 @@ hr {
     font-weight: bold;
 }
 
-#expressao::placeholder{
+#expressao::placeholder {
     font-weight: 100;
 }
 
-.functions #limpar{
+.functions #limpar {
     display: none;
 }
 
@@ -131,4 +131,104 @@ hr {
     .card {
         width: 100%;
     }
+}
+
+/*
+    Sena
+*/
+.container-apostas {
+    box-shadow: 0px 0px 10px var(--cor-primaria);
+    border-radius: 6px;
+    min-width: 280px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    /* margens */
+    padding: 1rem;
+}
+
+section span {
+    font-size: 20px;
+    text-align: center;
+}
+
+section input {
+    /* fonte */
+    font-size: 1rem;
+    text-align: center;
+
+    /* margens */
+    padding-block: 4px;
+    margin-block: 1rem;
+    margin-inline: auto;
+
+    /* dimensões */
+    width: 95%;
+
+    /* bordas */
+    border: 1px solid var(--cor-primaria);
+    border-radius: 4px;
+    outline: none;
+}
+
+section input:focus {
+    box-shadow: 0px 0px 4px var(--cor-secundaria);
+}
+
+section button {
+    /* dimensões */
+    width: 95%;
+
+    /* fonte */
+    font-size: 1rem;
+    text-align: center;
+
+    /* margens */
+    padding-block: 4px;
+    margin-inline: auto;
+    margin-bottom: 8px;
+
+    /* bordas */
+    border: none;
+    border-radius: 4px;
+    outline: none;
+
+    background-color: var(--cor-primaria);
+    color: #222;
+
+    /* animação */
+    transition: all 0.8s;
+}
+
+section button:hover {
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 10px var(--cor-secundaria);
+    cursor: pointer;
+}
+
+section ul {
+    list-style: none;
+    text-align: center;
+}
+
+section ul li {
+    padding-block: 4px;
+    width: 95%;
+    margin: auto;
+    margin-block: 8px;
+    background-color: #888;
+    color: #f4f4f4;
+    font-weight: bolder;
+    border-radius: 4px;
+}
+
+section ul li:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #f4f4f4;
+}
+
+
+section #btnLimpar {
+    display: none;
 }

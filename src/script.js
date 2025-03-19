@@ -56,3 +56,81 @@ function calcular() {
         resultado.style = "color: red;"
     }
 }
+
+/**
+ * Sena
+ */
+function gerarNumero() {
+    let min = 1;
+    let max = 60;
+    let numberRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+    return numberRandom;
+}
+
+function gerarListaNumeros() {
+    // Set garante a unicidade
+    let numbers = new Set();
+
+    // Gerar 6 números únicos
+    while (numbers.size < 6) {
+        // Adiciona um número ao Set, se for único
+        numbers.add(gerarNumero());
+    }
+
+    // Converter o Set para um array e retornar o array ordenado
+    return [...numbers].sort((a, b) => a - b);
+}
+
+function gerarApostas() {
+    let qntApostas = document.getElementById("quantidade-apostas").value;
+    let listaApostas = document.getElementById("lista-apostas"); // ul
+
+    // Limpar a lista de apostas antes de adicionar novas apostas
+    listaApostas.innerHTML = '';
+
+    // Exibe o botão limpar
+    document.getElementById("btnLimpar").style.display = "block";
+
+    for (let i = 0; i < qntApostas; i++) {
+        const li = document.createElement("li");
+
+        // Adiciona um evento de clique para copiar o conteúdo do <li>
+        li.onclick = function () {
+            copiarParaAreaDeTransferencia(li.textContent);
+        };
+
+
+        // Gerar os números da aposta
+        let listaNumeros = gerarListaNumeros();
+
+        // Adicionar os números ao <li> como texto
+        // Junta os números em uma string separada por vírgulas
+        li.textContent = listaNumeros.join(", ");
+
+        // Adiciona o <li> à lista de apostas
+        listaApostas.appendChild(li);
+    }
+    document.getElementById("quantidade-apostas").value = "1";
+}
+
+function limparApostas() {
+    // seleciona todos os li
+    const linhas = document.querySelectorAll("li");
+
+    // remove todas as li
+    linhas.forEach(i => i.remove());
+
+    // remove o botão Limpar do HTML
+    document.getElementById("btnLimpar").style.display = "none";
+}
+
+function copiarParaAreaDeTransferencia(texto) {
+    // Usando a Clipboard API para copiar o texto para a área de transferência
+    navigator.clipboard.writeText(texto)
+        .then(function () {
+            alert("Texto copiado para a área de transferência!");
+        })
+        .catch(function (err) {
+            console.error("Erro ao copiar o texto: ", err);
+        });
+}

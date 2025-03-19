@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Fragmentos da Web" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Fabricyo Costa" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="https://raw.githubusercontent.com/fabricyoc/fabricyoc.github.io/refs/heads/master/src/favicon.ico"
+    type="image/x-icon">
+    <link rel="stylesheet" href="./estilo.css">
+  <title>Mega Sena</title>
+</head>
+
+<body>
+  <section class="container-apostas">
+    <span>Deseja fazer quantas apostas?</span>
+    <input type="number" min="1" value="1" id="quantidade-apostas" />
+    <button onclick="gerarApostas()">Gerar apostas</button>
+    <button onclick="window.location.href='https://fabricyoc.github.io';">Voltar</button>
+    <button onclick="limparApostas()" id="btnLimpar">Limpar</button>
+    <ul id="lista-apostas">
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
