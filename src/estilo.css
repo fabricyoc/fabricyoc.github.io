@@ -131,16 +131,25 @@ hr {
     .card {
         width: 100%;
     }
+
+    .container-apostas {
+        width: 100%;
+
+    }
 }
 
 /*
     Sena
 */
 .container-apostas {
+    /* dimensões */
+    width: 20rem;
+    height: 360px;
+
+    background-color: white;
     box-shadow: 0px 0px 10px var(--cor-primaria);
     border-radius: 6px;
-    min-width: 280px;
-    width: 300px;
+
     display: flex;
     flex-direction: column;
 
@@ -155,7 +164,7 @@ section span {
 
 section input {
     /* fonte */
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
 
     /* margens */
@@ -183,9 +192,10 @@ section button {
     /* fonte */
     font-size: 1rem;
     text-align: center;
+    font-weight: bolder;
 
     /* margens */
-    padding-block: 4px;
+    padding-block: 6px;
     margin-inline: auto;
     margin-bottom: 8px;
 
@@ -210,15 +220,35 @@ section button:hover {
 section ul {
     list-style: none;
     text-align: center;
+    overflow-y: auto;
+}
+
+section ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+section ul::-webkit-scrollbar-track {
+    /* barra de rolagem */
+    background: #888;
+    border-radius: 20px;
+}
+
+section ul::-webkit-scrollbar-thumb {
+    /* guia da barra de rolagem */
+    background-color: var(--cor-primaria);
+    border-radius: 20px;
 }
 
 section ul li {
-    padding-block: 4px;
     width: 95%;
+
     margin: auto;
     margin-block: 8px;
+    padding-block: 6px;
+
     background-color: #888;
     color: #f4f4f4;
+
     font-weight: bolder;
     border-radius: 4px;
 }
