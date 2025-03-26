@@ -59,6 +59,10 @@ function resolverFatoriais(exp) {
     return exp.replace(/(\d+)!/g, (match, numero) => fatorial(Number(numero)));
 }
 
+/**
+ * Mega sena
+ */
+
 function gerarNumero() {
     let min = 1, max = 60;
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -77,13 +81,16 @@ function gerarApostas() {
     let listaApostas = document.getElementById("lista-apostas");
     listaApostas.innerHTML = '';
     document.getElementById("btnLimpar").style.display = "block";
-    
+
     for (let i = 0; i < qntApostas; i++) {
         const li = document.createElement("li");
         li.onclick = function () { copiarParaAreaDeTransferencia(li.textContent); };
         li.textContent = gerarListaNumeros().join(", ");
         listaApostas.appendChild(li);
     }
+
+    // rolar o scroll da lista de apostas suavemente para o topo
+    listaApostas.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function limparApostas() {
