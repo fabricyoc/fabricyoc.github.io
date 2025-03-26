@@ -1,3 +1,4 @@
+// formata o resultado no padrão brasileiro
 function formatarMoeda(valor) {
     let formatted = new Intl.NumberFormat('pt-BR', {
         currency: 'BRL'
@@ -9,6 +10,7 @@ function formatarMoeda(valor) {
     return partes.join(',');
 }
 
+// limpa as informações em tela
 function limpar(e) {
     e.preventDefault();
     document.getElementById("expressao").value = '';
@@ -17,6 +19,7 @@ function limpar(e) {
     document.getElementById("expressao").focus();
 }
 
+// realiza o calculo
 function calcular() {
     let exp = document.getElementById("expressao");
     let resultado = document.getElementById("resultado");
