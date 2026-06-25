@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site descontinuado</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: linear-gradient(135deg, #ffa833, #794312);
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.2rem;
+      background: #fff;
+      color: #794312;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #ffa833;
+      color: #fff;
+    }
+
+    .countdown {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>⚠️ Este site foi descontinuado</h1>
+
+    <p>
+      O portfólio antigo não é mais atualizado.<br />
+      Você será redirecionado para a nova versão.
+    </p>
+
+    <a href="https://fabricyo.vercel.app">
+      Ir para novo site
+    </a>
+
+    <div class="countdown" id="countdown">
+      Redirecionando em 5 segundos...
+    </div>
+  </div>
+
+  <script>
+    let time = 5;
+    const el = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      time--;
+      el.textContent = `Redirecionando em ${time} segundos...`;
+
+      if (time <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://fabricyo.vercel.app";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
